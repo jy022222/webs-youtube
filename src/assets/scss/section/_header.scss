@@ -1,6 +1,10 @@
 .header__logo {
     border-bottom: 1px solid var(--black100);
 
+    @media (max-width: 800px) {
+        border-bottom: 0;
+    }
+
     a {
         display: flex;
         padding: 10px;
@@ -108,7 +112,7 @@
     padding: 15px 0 10px;
     background-color: var(--blackAlpha100);
     backdrop-filter: blur(10px);
-
+    
     li {
         display: inline-block;
 
@@ -125,7 +129,7 @@
         border-radius: 0;
     }
 
-    50% { 
+    50% {
         transform: rotate(720deg) scale(0.5);
         border-radius: 20px;
     }
@@ -133,5 +137,11 @@
     100% {
         transform: rotate(0) scale(1);
         border-radius: 0;
+    }
+}
+
+@media (max-width: 800px) {
+    .header__sns {
+        display: none;
     }
 }
